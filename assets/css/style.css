@@ -106,7 +106,7 @@ img{
 	justify-content: center;
 	align-items: center;
 }
-.rodape button{
+.btn-normal{
 	background-color: #CBCBCB;
 	width: 90%;
 	height: 61px;
@@ -127,3 +127,24 @@ img{
 	width: 200px;
 }
 /*FIM RODAPE*/
+
+.selecionado{
+	border: #32B72F solid 5px;
+	padding: 9px;
+	background-image: url(../img/check.svg);
+	background-repeat: no-repeat;
+    background-position: 135px 95%;
+}
+.btn-selecionado{
+	background-color: #32B72F;
+	width: 90%;
+	height: 61px;
+	border-radius: 50px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.escondido{
+	display: none;
+}
