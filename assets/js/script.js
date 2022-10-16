@@ -6,7 +6,10 @@ let pratoValor;
 let bebidaValor;
 let sobremesaValor;
 
-let total
+let total;
+
+let nome;
+let endereco;
 
 function marcaPrato(prato){
    
@@ -112,6 +115,12 @@ function liberaBotao(){
 
 
 function pedido(){
+
+    nome = prompt(`Digite seu nome`);
+    endereco = prompt(`Digite seu endereço`);
+    
+    alert(`Obrigado ${nome}, revise seu pedido antes de pedir`)
+
     const telaPedido = document.querySelector('.fundo');
     telaPedido.classList.remove('escondido')
 
@@ -137,15 +146,15 @@ function cancelar(){
 
 
 function finalizarPedido(){ 
-    
+
     let texto = encodeURIComponent(`Olá, gostaria de fazer o pedido:
     - Prato: ${pratoEscolhido}
     - Bebida: ${bebidaEscolhido}
     - Sobremesa: ${sobremesaEscolhido}
-    Total: R$ ${total}`)
+    Total: R$ ${total}
+    
+    Nome: ${nome}
+    Endereço: ${endereco}`)
 
-    window.open("https://wa.me/5521968531110?text=" + texto)
+    open("https://wa.me/5521979272015?text=" + texto)
 }
-
-
-alert('ola meu nome é leonarodo')
