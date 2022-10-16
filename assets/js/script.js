@@ -6,6 +6,7 @@ let pratoValor;
 let bebidaValor;
 let sobremesaValor;
 
+let total
 
 function marcaPrato(prato){
    
@@ -23,8 +24,8 @@ function marcaPrato(prato){
     inserindoPedido.innerHTML = pratoEscolhido;
 
 
-    pratoValor = prato.querySelector('.valor');
-    pratoValor = Number(pratoValor.innerHTML);
+    pratoValor = prato.querySelector('span');
+    pratoValor = pratoValor.innerHTML;
 
     const inserindoValor = document.querySelector(".itens-pedido .valor-prato");
     inserindoValor.innerHTML = pratoValor;
@@ -52,7 +53,7 @@ function marcaBebida(bebida){
 
 
 
-    bebidaValor = bebida.querySelector('h3');
+    bebidaValor = bebida.querySelector('span');
     bebidaValor = bebidaValor.innerHTML;
 
     const inserindoValor = document.querySelector(".itens-pedido .valor-bebida");
@@ -80,7 +81,7 @@ function marcaSobremesa(sobremesa){
     inserindoPedido.innerHTML = sobremesaEscolhido;
 
 
-    sobremesaValor = sobremesa.querySelector('h3');
+    sobremesaValor = sobremesa.querySelector('span');
     sobremesaValor = sobremesaValor.innerHTML;
 
     const inserindoValor = document.querySelector(".itens-pedido .valor-sobremesa");
@@ -113,6 +114,13 @@ function liberaBotao(){
 function pedido(){
     const telaPedido = document.querySelector('.fundo');
     telaPedido.classList.remove('escondido')
+
+    const real = 'R$ '
+    total = Number(pratoValor) + Number(bebidaValor) + Number(sobremesaValor);
+    total = total.toFixed(2);
+
+    const inserindoTotal = document.querySelector(".total");
+    inserindoTotal.innerHTML = real + total;
 }
 
 function cancelar(){
