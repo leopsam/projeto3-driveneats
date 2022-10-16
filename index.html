@@ -23,7 +23,7 @@
 					<img src="./assets/img/prato1.jpg" />
 					<h2>Frango Yin Yang</h2>
 					<p>Um pouco de batata, um pouco de salada</p>
-					<h3>R$ 14,90</h3>
+					<h3>R$ <span class="valor">14,90</span></h3>
 				</div>
 				<div onclick="marcaPrato(this)" class="prato-caixa caixa">
 					<img src="./assets/img/prato2.jpg" />
@@ -117,8 +117,36 @@
 		<!--FIM SOBREMESA-->
 	</div>
 
+	
+	
+	<div class="fundo escondido">
+		<div class="finalizando">
+			<h3>Confirme seu pedido</h3>
+			<div class="itens-pedido">
+				<div class="container">
+					<p class="prato">prato</p>
+					<p class="bebida">bebida</p>
+					<p class="sobremesa">sobremesa</p>
+					<p>Total</p>
+				</div>
+				<div class="container">
+					<p class="valor-prato">14,90</p>
+					<p class="valor-bebida">14,90</p>
+					<p class="valor-sobremesa">14,90</p>
+					<p>R$ 220,90</p>
+				</div>
+			</div>
+			<div class="botoes">
+				<button>Tudo certo, pode pedir!</button>
+				<a onclick="cancelar()" href="#">cancelar</a>
+			</div>			
+		</div>
+	</div>
+
+
+
 	<div class="rodape">
-		<button class="btn-selecionado escondido">
+		<button onclick="pedido()" class="btn-selecionado escondido">
 			<p>Fechar pedido</p>
 		</button>
 
@@ -126,6 +154,9 @@
 			<p>Selecione os 3 itens para fechar o pedido</p>
 		</button>		
 	</div>
+
+
+	
 
 	<script src="assets/js/script.js"></script>
 </body>
