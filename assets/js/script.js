@@ -108,7 +108,7 @@ function liberaBotao(){
 }
 
 
-
+//-----------------------------------------------------------
 
 
 function pedido(){
@@ -123,10 +123,29 @@ function pedido(){
     inserindoTotal.innerHTML = real + total;
 }
 
+
+//-----------------------------------------------------------
+
+
 function cancelar(){
     const telaPedido = document.querySelector('.fundo');
     telaPedido.classList.add('escondido')
 }
 
 
-alert(encodeURIComponent('ola meu nome é leonarodo'))
+//-----------------------------------------------------------
+
+
+function finalizarPedido(){ 
+    
+    let texto = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+    - Prato: ${pratoEscolhido}
+    - Bebida: ${bebidaEscolhido}
+    - Sobremesa: ${sobremesaEscolhido}
+    Total: R$ ${total}`)
+
+    window.open("https://wa.me/5521968531110?text=" + texto)
+}
+
+
+alert('ola meu nome é leonarodo')
